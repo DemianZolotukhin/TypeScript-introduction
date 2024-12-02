@@ -16,7 +16,37 @@ let a: any = '1'; //не опреділений тип
 
 a = () => 1;
 
+type NumberOrString = number | string
+
+function addTwo(num: NumberOrString): number { //можна створити тип самостійно
+    return 1 + Number(num)
+}
 
 function addOne(num: number | string): number { //два потенційних типи
     return 1 + Number(num)
 }
+
+const person1: {
+    name: string
+    age: number
+    hobbies: string[]
+} = {
+    name: 'Oleg',
+    age: 29,
+    hobbies: ['guitar', 'rap']
+}
+
+// для зручності типізацію можна вивести в інтерфейс
+
+interface User {
+    name: string
+    age: number
+    hobbies: string[]
+} 
+
+const person2: User = {
+    name: 'Oleg',
+    age: 29,
+    hobbies: ['guitar', 'rap'],
+}
+
