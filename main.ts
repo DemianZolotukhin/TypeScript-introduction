@@ -50,3 +50,27 @@ const person2: User = {
     hobbies: ['guitar', 'rap'],
 }
 
+let a2: unknown = 42
+
+let b2 = a === 42 ? 'hello' : 'world'
+
+function infinite(): never {
+    while (true) {
+        console.log(1 + 1)
+    }
+}
+
+
+// class User {
+//     public name: string
+//     protected weight: number
+//     private age: number
+
+//     constructor(public name: string) {
+//     }
+// }
+
+
+function half<T extends number | string>(array: T[]): T[] {
+    return array.slice(0, array.length / 2)
+}
